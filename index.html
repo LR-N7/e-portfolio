@@ -127,11 +127,20 @@
                         <span class="lang-fr">Me contacter</span>
                         <span class="lang-en">Contact me</span>
                     </a>
-                    <a href="Louis_REEVES.pdf" target="_blank" class="px-6 py-3 bg-white text-primary hover:text-white hover:bg-primary border border-primary font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex items-center">
-                        <i class="fas fa-file-pdf mr-2 text-xl"></i>
-                        <span class="lang-fr">Mon CV</span>
-                        <span class="lang-en">My CV</span>
-                    </a>
+                    <!-- CV: French + English versions -->
+                    <div class="flex items-stretch rounded-lg border border-primary bg-white shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                        <a href="Louis_REEVES.pdf" target="_blank" rel="noopener" class="px-4 py-3 text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center font-medium">
+                            <i class="fas fa-file-pdf mr-2 text-xl"></i>
+                            <span class="lang-fr">CV Français</span>
+                            <span class="lang-en">French CV</span>
+                        </a>
+                        <span class="w-px bg-primary/30"></span>
+                        <a href="Louis_REEVES_CV_EN.pdf" target="_blank" rel="noopener" class="px-4 py-3 text-white bg-primary hover:bg-secondary transition-colors duration-300 flex items-center font-medium">
+                            <i class="fas fa-file-pdf mr-2 text-xl"></i>
+                            <span class="lang-fr">CV Anglais</span>
+                            <span class="lang-en">English CV</span>
+                        </a>
+                    </div>
                     <a href="https://github.com/LR-N7" target="_blank" class="px-6 py-3 bg-white text-slate-700 hover:text-primary border border-slate-200 font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex items-center">
                         <i class="fab fa-github mr-2 text-xl"></i> GitHub
                     </a>
@@ -387,6 +396,11 @@
                             <span class="lang-fr">Escalade & Algorithmique</span>
                             <span class="lang-en">Climbing & Algorithms</span>
                         </p>
+                        <button type="button" onclick="openProjectResources(0)" class="mt-5 inline-flex items-center px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-medium transition-colors">
+                            <i class="fas fa-images mr-2 text-accent"></i>
+                            <span class="lang-fr">29 diapositives</span>
+                            <span class="lang-en">29 slides</span>
+                        </button>
                     </div>
                 </div>
                 <div class="md:w-3/5 p-8 flex flex-col justify-center">
@@ -408,6 +422,52 @@
                         <span class="px-3 py-1 bg-slate-200 text-slate-800 rounded-full text-xs font-bold">Replit</span>
                         <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-bold">Dijkstra</span>
                         <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-bold">Math/Phys</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project resources -->
+            <div class="max-w-4xl mx-auto mt-6 bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                <div class="flex flex-col md:flex-row md:items-center gap-6">
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-secondary flex items-center">
+                            <i class="fas fa-folder-open text-primary mr-3"></i>
+                            <span class="lang-fr">Ressources du projet</span>
+                            <span class="lang-en">Project resources</span>
+                        </h4>
+                        <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                            <span class="lang-fr">
+                                Le diaporama de soutenance (29 diapositives, en français) : démarche, modélisation, mesures
+                                expérimentales et code des annexes. Feuilletez-le directement ici ou téléchargez le PDF.
+                            </span>
+                            <span class="lang-en">
+                                The defence slide deck (29 slides, in French): approach, modelling, experimental
+                                measurements and the annex source code. Browse it right here or download the PDF.
+                            </span>
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 md:flex-col lg:flex-row">
+                        <button onclick="openProjectResources(0)" class="px-5 py-3 bg-primary hover:bg-secondary text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center">
+                            <i class="fas fa-images mr-2"></i>
+                            <span class="lang-fr">Voir les diapositives</span>
+                            <span class="lang-en">View the slides</span>
+                        </button>
+                        <a href="assets/tipe/TIPE_REEVES.pdf" target="_blank" rel="noopener" class="px-5 py-3 bg-white text-primary border border-primary hover:bg-primary hover:text-white font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i>
+                            <span class="lang-fr">PDF complet</span>
+                            <span class="lang-en">Full PDF</span>
+                        </a>
+                        <!-- Shown until the project website URL is filled in (see TIPE_PROJECT_URL in the script) -->
+                        <span id="tipeWebsitePlaceholder" class="px-5 py-3 bg-slate-100 text-slate-500 border border-slate-200 border-dashed font-medium rounded-lg flex items-center cursor-default">
+                            <i class="fas fa-globe mr-2"></i>
+                            <span class="lang-fr">Site web du projet — bientôt</span>
+                            <span class="lang-en">Project website — coming soon</span>
+                        </span>
+                        <a id="tipeWebsiteLink" href="#" target="_blank" rel="noopener" class="hidden px-5 py-3 bg-secondary text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center">
+                            <i class="fas fa-globe mr-2"></i>
+                            <span class="lang-fr">Site web du projet</span>
+                            <span class="lang-en">Project website</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -501,40 +561,255 @@
         </div>
     </footer>
 
+    <!-- ===================== Project resources viewer ===================== -->
+    <div id="projectResources" class="hidden fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-labelledby="prTitle" aria-describedby="prHint">
+        <!-- backdrop -->
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-sm" data-pr-close></div>
+
+        <div class="relative z-10 flex h-full flex-col text-slate-100">
+            <!-- header -->
+            <header class="flex items-start justify-between gap-4 px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10">
+                <div class="min-w-0">
+                    <h3 id="prTitle" class="text-base sm:text-xl font-bold text-white truncate">
+                        <span class="lang-fr">Recherche des meilleurs chemins en escalade — diaporama</span>
+                        <span class="lang-en">Finding the best climbing routes — slide deck</span>
+                    </h3>
+                    <p id="prHint" class="text-[11px] sm:text-sm text-slate-400 mt-1">
+                        <span class="lang-fr">29 diapositives (en français) · naviguez avec les flèches ← → du clavier</span>
+                        <span class="lang-en">29 slides (in French) · navigate with the ← → arrow keys</span>
+                    </p>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                    <a href="assets/tipe/TIPE_REEVES.pdf" target="_blank" rel="noopener" class="flex items-center px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium">
+                        <i class="fas fa-file-pdf sm:mr-2"></i>
+                        <span class="hidden sm:inline">PDF</span>
+                    </a>
+                    <button type="button" onclick="closeProjectResources()" class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors" aria-label="Fermer / Close">
+                        <i class="fas fa-xmark text-lg"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- stage -->
+            <div class="relative flex-1 min-h-0 flex items-center justify-center px-2 sm:px-16 py-3 sm:py-6">
+                <button type="button" onclick="prevSlide()" class="absolute left-1 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/25 backdrop-blur transition-colors" aria-label="Diapositive précédente / Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <figure class="flex flex-col items-center gap-3 max-h-full min-h-0">
+                    <a id="prImageLink" href="#" target="_blank" rel="noopener" class="min-h-0 flex items-center justify-center" title="Ouvrir la diapositive / Open the slide">
+                        <img id="prImage" src="" alt="" class="max-h-[46vh] sm:max-h-[54vh] lg:max-h-[60vh] w-auto rounded-lg shadow-2xl border border-white/10 bg-white">
+                    </a>
+                    <figcaption class="text-center text-xs sm:text-sm text-slate-300 max-w-3xl px-2 leading-relaxed">
+                        <span id="prCounter" class="inline-block px-2 py-0.5 mr-2 rounded bg-white/10 text-white font-semibold tabular-nums">1 / 29</span>
+                        <span id="prCaption" class="lang-fr"></span>
+                        <span id="prCaptionEn" class="lang-en"></span>
+                    </figcaption>
+                </figure>
+
+                <button type="button" onclick="nextSlide()" class="absolute right-1 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/25 backdrop-blur transition-colors" aria-label="Diapositive suivante / Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- filmstrip -->
+            <footer class="border-t border-white/10 px-3 sm:px-6 py-2 sm:py-3">
+                <div id="prStrip" class="flex gap-2 overflow-x-auto pb-1 scroll-smooth [scrollbar-width:thin]"></div>
+            </footer>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script>
+        // ------------------------------------------------------------------
         // Language Toggle Logic
+        // ------------------------------------------------------------------
         let currentLang = 'fr'; // Start with French
 
-        function toggleLanguage() {
-            const frElements = document.querySelectorAll('.lang-fr');
-            const enElements = document.querySelectorAll('.lang-en');
-            const btn = document.getElementById('langToggleBtn');
-            const btnMobile = document.getElementById('langToggleBtnMobile');
+        function applyLanguage(lang) {
+            currentLang = lang;
+            const show = lang === 'fr' ? '.lang-fr' : '.lang-en';
+            const hide = lang === 'fr' ? '.lang-en' : '.lang-fr';
 
-            if (currentLang === 'fr') {
-                // Switch to English
-                frElements.forEach(el => el.style.display = 'none');
-                enElements.forEach(el => el.style.display = 'inline'); // or flex/block depending on context, inline is safest for span
-                btn.textContent = 'EN';
-                btnMobile.textContent = 'EN';
-                currentLang = 'en';
-            } else {
-                // Switch to French
-                enElements.forEach(el => el.style.display = 'none');
-                frElements.forEach(el => el.style.display = 'inline');
-                btn.textContent = 'FR';
-                btnMobile.textContent = 'FR';
-                currentLang = 'fr';
-            }
+            document.querySelectorAll(hide).forEach(el => (el.style.display = 'none'));
+            document.querySelectorAll(show).forEach(el => (el.style.display = 'inline'));
+            document.documentElement.lang = lang;
+
+            const label = lang === 'fr' ? 'FR' : 'EN';
+            ['langToggleBtn', 'langToggleBtnMobile'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.textContent = label;
+            });
+
+            // the slide caption is rebuilt for the active language
+            if (typeof renderCaption === 'function') renderCaption();
         }
 
-        // Fix potential display block/inline issues with spans vs divs
-        // Since we wrapped mostly text in spans, 'inline' works. 
-        // For any block elements using these classes, we might need a more robust CSS class toggle, 
-        // but inline styles are fine for this specific structure.
+        function toggleLanguage() {
+            applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
+        }
 
+        // ------------------------------------------------------------------
+        // Project resources viewer (TIPE slide deck)
+        // ------------------------------------------------------------------
+        // Paste the project website URL below; the "Project website" button
+        // then replaces the "coming soon" placeholder automatically.
+        const TIPE_PROJECT_URL = '';
+
+        const TIPE_SLIDES = [
+            { fr: "Page de titre — analyse du mur et facteurs humains et artificiels.", en: "Title slide — wall analysis, human and artificial factors." },
+            { fr: "Présentation du plan et de la problématique : comment déterminer les trajets les plus efficaces grâce à l'algorithmie ?", en: "Agenda and problem statement: how can algorithms find the most efficient routes?" },
+            { fr: "Rappel de l'algorithme de Dijkstra (et de A* pour réduire le temps de recherche).", en: "Recap of Dijkstra's algorithm (and A* for shorter search times)." },
+            { fr: "Modélisation d'approche : un état = la position des quatre membres (MG, MD, PG, PD), les prises forment un graphe.", en: "Approach modelling: a state is the position of the four limbs (LH, RH, LF, RF); holds form a graph." },
+            { fr: "Modélisation du grimpeur : un seul membre par prise, mouvements statiques, un membre déplacé à la fois.", en: "Modelling the climber: one limb per hold, static moves, one limb moving at a time." },
+            { fr: "Recherche des états admissibles (limites de distance, mains au-dessus des pieds) puis des états adjacents.", en: "Searching admissible states (reach limits, hands above feet) and then adjacent states." },
+            { fr: "Passage d'une trace réelle au graphe d'états correspondant.", en: "Going from a real climbing sequence to the corresponding state graph." },
+            { fr: "Effort maximal applicable sur une prise : modélisation de l'angle de traction du doigt.", en: "Maximum effort applicable on a hold: modelling the finger's pulling angle." },
+            { fr: "Conception et fabrication du banc de mesure (supports d'angle et poutre).", en: "Designing and building the test rig (angle blocks and beam)." },
+            { fr: "Protocole expérimental avec dynamomètre sur la poutre d'entraînement.", en: "Experimental protocol using a dynamometer on the training beam." },
+            { fr: "Comparaison avec et sans magnésie.", en: "Comparison with and without chalk." },
+            { fr: "Théorie : équilibre des forces sur le doigt et expression de la force maximale Fmax.", en: "Theory: force balance on the finger and the resulting maximum force Fmax." },
+            { fr: "Mesure de la force de compression Fc : Fc = (35,63 ± 1,18) N.", en: "Measuring the compression force Fc: Fc = (35.63 ± 1.18) N." },
+            { fr: "Coefficient de frottement déduit des mesures : 0,35 sans magnésie et 0,5 avec.", en: "Friction coefficient derived from the measurements: 0.35 without chalk and 0.5 with." },
+            { fr: "Force maximale en fonction de l'angle : confrontation des modèles théorique et expérimental.", en: "Maximum force as a function of the angle: theory versus experiment." },
+            { fr: "Construction du coût de l'effort : pondération de chaque mouvement par la force maximale de la prise.", en: "Building the effort cost: weighting every move by the hold's maximum force." },
+            { fr: "Étiquetage des prises et des angles sur la voie de test.", en: "Labelling holds and angles on the test route." },
+            { fr: "Retour d'expérience : usage réel des prises en situation de grimpe.", en: "Field feedback: how holds are actually used while climbing." },
+            { fr: "Annexe 1 — calcul de la distance entre deux prises.", en: "Annex 1 — computing the distance between two holds." },
+            { fr: "Annexe 2 — test d'admissibilité d'un état.", en: "Annex 2 — testing whether a state is admissible." },
+            { fr: "Annexe 3 — génération des sommets possibles à partir des prises.", en: "Annex 3 — generating the possible states from the holds." },
+            { fr: "Annexe 4 — recherche des états adjacents.", en: "Annex 4 — finding adjacent states." },
+            { fr: "Annexe 5 — construction de la liste d'adjacence du graphe.", en: "Annex 5 — building the graph's adjacency list." },
+            { fr: "Annexe 6 — calcul du coût d'un mouvement.", en: "Annex 6 — computing the cost of a move." },
+            { fr: "Annexe 7 — force maximale et coût de l'effort.", en: "Annex 7 — maximum force and effort cost." },
+            { fr: "Annexe 8 — application de l'algorithme sur le graphe d'états.", en: "Annex 8 — running the algorithm on the state graph." },
+            { fr: "Annexe 9 — conversion des coordonnées en indices de sommets.", en: "Annex 9 — converting coordinates into state indices." },
+            { fr: "Annexe 10 — reconstruction du trajet (plus court chemin).", en: "Annex 10 — reconstructing the route (shortest path)." },
+            { fr: "Calcul d'incertitudes : mesures au dynamomètre, type A et type B.", en: "Uncertainty calculation: dynamometer measurements, type A and type B." }
+        ];
+
+        const slideSrc = i => 'assets/tipe/slides/slide-' + String(i + 1).padStart(2, '0') + '.jpg';
+
+        let slideIndex = 0;
+        let stripBuilt = false;
+        const modal = document.getElementById('projectResources');
+        const img = document.getElementById('prImage');
+        const imgLink = document.getElementById('prImageLink');
+        const counter = document.getElementById('prCounter');
+        const captionFr = document.getElementById('prCaption');
+        const captionEn = document.getElementById('prCaptionEn');
+        const strip = document.getElementById('prStrip');
+
+        function renderCaption() {
+            const slide = TIPE_SLIDES[slideIndex];
+            if (!slide) return;
+            captionFr.textContent = slide.fr;
+            captionEn.textContent = slide.en;
+        }
+
+        function buildStrip() {
+            if (stripBuilt) return;
+            const frag = document.createDocumentFragment();
+            TIPE_SLIDES.forEach((slide, i) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.dataset.index = i;
+                btn.className = 'relative shrink-0 rounded-md overflow-hidden border-2 border-transparent hover:border-accent/70 transition-all w-[104px] sm:w-[132px] aspect-video bg-slate-800';
+                btn.setAttribute('aria-label', 'Diapositive ' + (i + 1));
+                btn.innerHTML =
+                    '<img src="' + slideSrc(i) + '" alt="" loading="lazy" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity">' +
+                    '<span class="absolute bottom-0 right-0 px-1 text-[10px] font-bold text-white bg-slate-900/70 rounded-tl">' + (i + 1) + '</span>';
+                btn.addEventListener('click', () => showSlide(i));
+                frag.appendChild(btn);
+            });
+            strip.appendChild(frag);
+            stripBuilt = true;
+        }
+
+        function showSlide(i) {
+            const total = TIPE_SLIDES.length;
+            slideIndex = ((i % total) + total) % total;
+            const src = slideSrc(slideIndex);
+
+            img.src = src;
+            img.alt = 'Diapositive ' + (slideIndex + 1) + ' — ' + TIPE_SLIDES[slideIndex].fr;
+            imgLink.href = src;
+            counter.textContent = (slideIndex + 1) + ' / ' + total;
+            renderCaption();
+
+            // highlight the current thumbnail
+            strip.querySelectorAll('button').forEach(btn => {
+                const active = Number(btn.dataset.index) === slideIndex;
+                btn.classList.toggle('border-accent', active);
+                btn.classList.toggle('border-transparent', !active);
+            });
+            const active = strip.querySelector('button[data-index="' + slideIndex + '"]');
+            if (active && active.scrollIntoView) {
+                active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+
+            // preload neighbours for a snappier paging
+            [slideIndex + 1, slideIndex - 1].forEach(n => {
+                const j = ((n % total) + total) % total;
+                new Image().src = slideSrc(j);
+            });
+        }
+
+        function nextSlide() { showSlide(slideIndex + 1); }
+        function prevSlide() { showSlide(slideIndex - 1); }
+
+        function openProjectResources(start) {
+            buildStrip();
+            showSlide(start || 0);
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            modal.querySelector('button[aria-label="Fermer / Close"]').focus();
+        }
+
+        function closeProjectResources() {
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        document.addEventListener('keydown', e => {
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'Escape') { closeProjectResources(); }
+            else if (e.key === 'ArrowRight') { e.preventDefault(); nextSlide(); }
+            else if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+        });
+
+        // swipe on touch devices
+        (function () {
+            let x0 = null;
+            const stage = modal.querySelector('figure');
+            stage.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+            stage.addEventListener('touchend', e => {
+                if (x0 === null) return;
+                const dx = e.changedTouches[0].clientX - x0;
+                if (Math.abs(dx) > 45) (dx < 0 ? nextSlide : prevSlide)();
+                x0 = null;
+            }, { passive: true });
+        })();
+
+        // close when clicking the backdrop
+        modal.querySelectorAll('[data-pr-close]').forEach(el => {
+            el.addEventListener('click', closeProjectResources);
+        });
+
+        // reveal the project website button once its URL is known
+        (function () {
+            const link = document.getElementById('tipeWebsiteLink');
+            const placeholder = document.getElementById('tipeWebsitePlaceholder');
+            if (TIPE_PROJECT_URL) {
+                link.href = TIPE_PROJECT_URL;
+                link.classList.remove('hidden');
+                placeholder.classList.add('hidden');
+            }
+        })();
+
+        // ------------------------------------------------------------------
         // Mobile Menu Toggle
+        // ------------------------------------------------------------------
         const btn = document.getElementById('mobileMenuBtn');
         const menu = document.getElementById('mobileMenu');
 
