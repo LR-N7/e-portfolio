@@ -55,5 +55,7 @@ and the placeholder is swapped for the real link automatically.
 The *Mobility* section (`#mobility`) shows the mobility video, three role models and
 three scenarios (plans A / B / C).
 
-To publish the video, drop the file in `assets/video/` and point the `<source>` of the
-`#mobility` video element at it.
+The video is hosted on Google Drive (4K, ~860 MB — far above GitHub's 100 MB file limit)
+and embedded in the section through Google Drive's preview player, with a fallback link
+to open it in a new tab. To self-host a lighter version instead (e.g. a 720p export in
+`assets/video/mobility.mp4`), replace the `<iframe>` with a `<video>` element.
