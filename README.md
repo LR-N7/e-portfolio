@@ -10,6 +10,7 @@ Louis_REEVES_CV_EN.pdf     CV — English version (generated)
 assets/tipe/               TIPE project resources
   TIPE_REEVES.pdf          slide deck (downloadable)
   slides/                  deck exported as images for the in-page viewer
+docs/mobility-brief.md     mobility dossier: N7 rules, 3 role models, 3 plans, video script
 tools/
   build_cv_en.py           builds the English CV from the French layout
   build_slides.py          exports a deck PDF to assets/tipe/slides/*.jpg
@@ -49,3 +50,15 @@ const TIPE_PROJECT_URL = 'https://…';
 ```
 
 and the placeholder is swapped for the real link automatically.
+
+## Mobility section
+
+The *Mobility* section (`#mobility`) presents the second-year international mobility:
+the N7 framework (17 weeks, one exchange semester, 30 ECTS), the mobility video slot,
+three role models and three scenarios (plans A / B / C).
+
+The full dossier — role-model analysis, the English video script with timings and
+pronunciation notes, and the checklist — lives in [`docs/mobility-brief.md`](docs/mobility-brief.md).
+
+To publish the video, drop the file in `assets/video/` and point the `<source>` of the
+`#mobility` video element at it.
